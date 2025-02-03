@@ -1,0 +1,71 @@
+//上手くいかないので、あとで検討
+
+/* すべての要素に適用 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
+    /* 横スクロールを防ぐ */
+}
+
+/* 画面幅いっぱいのヘッダー */
+.header {
+    width: 100%;
+    height: 82px;
+    background-color: black;
+}
+
+/* ヘッダー内のコンテンツを中央に寄せる */
+.header__inner {
+    width: 100%;
+    max-width: 1540px;
+    /* PCでの最大幅 */
+    min-width: 1400px;
+    /* PCでの最小幅 */
+    height: 100%;
+    margin: 0 auto;
+    /* 中央配置 */
+    display: flex;
+    align-items: center;
+    padding: 0 25px;
+    /* 左右の余白 */
+}
+
+/* タブレット (768-850px) 用の調整 */
+@media (max-width: 1540px) {
+    .header-inner {
+        max-width: 100%;
+        /* 画面幅いっぱいに */
+        min-width: auto;
+        /* 制限を解除 */
+        padding: 0 20px;
+        /* 余白を調整 */
+    }
+}
+
+@media (max-width: 850px) {
+    .header {
+        height: 70px;
+        /* 高さを少し小さくする */
+    }
+
+    .header-inner {
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        height: 60px;
+    }
+
+    .header-inner {
+        padding: 0 10px;
+    }
+}
