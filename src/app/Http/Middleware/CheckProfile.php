@@ -17,10 +17,15 @@ class CheckProfile
      */
     public function handle(Request $request, Closure $next)
     {
-        $user = Auth::user();
+        //ログインしていない場合そのまま
+        if (!Auth::check()) {
+            return $next($request);
+        }
 
-        if (empty($user->address) || empty($user->postcode)) {
-            return redirect()->route('Profile.edit');
+        $user = Auth::user();
+        //プロフィール未入力なら設定へ
+        if (empty($user->postcode) || empty($user->address)) {
+            return redirect()->route('profile.edit');
         }
         
         return $next($request);

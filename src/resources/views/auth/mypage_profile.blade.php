@@ -9,7 +9,8 @@
   <div class="login-form__heading">
     <h2>プロフィール設定</h2>
   </div>
-  <form class="form" action="/login" method="post">
+  
+  <form class="form" action="/mypage/profile" method="post">
     @csrf
     <div class="form__group">
       <div class="form__group-title">

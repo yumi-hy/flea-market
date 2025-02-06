@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ItemController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,12 +15,15 @@ use App\Http\Controllers\UserController;
 |
 */
 
+Route::get('/', [ItemController::class, 'index'])->name('index');
+
 Route::middleware(['auth', 'check.profile'])->group(function () {
-    Route::get('/', [UserController::class, 'index']
-    )->name('index');
+    //ログイン・プロフィール必須のページ
+    Route::get('/dashboard', [UserController::class, 'dashboard']
+    )->name('dashboard');
 });
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('/mypage/profile', [UserController::class, 'edit'])->name('Profile.edit');
+    Route::get('/mypage/profile', [UserController::class, 'edit'])->name('profile.edit');
     Route::post('/mypage/profile', [UserController::class, 'update'])->name('profile.update');
 });

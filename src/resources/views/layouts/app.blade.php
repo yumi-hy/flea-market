@@ -16,26 +16,36 @@
     <div class="header__inner">
       <div class="header-utilities">
         <img src="{{ asset('img/logo.svg') }}" alt="coachtech">
+        
+        <form class="search-form" action="/search" method="get">
+          <input type="text" name="query" class="search-input" placeholder="なにをお探しですか？">
+        </form>
+
         <nav>
           <ul class="header-nav">
             @if (Auth::check())
-            <li class="header-nav__item">
-              <form class="search-form" action="/search" method="get">
-                <input type="text" name="query" class="search-input" placeholder="なにをお探しですか？">
-              </form>
-            </li>
-            <li class="header-nav__item">
-              <form class="form" action="/logout" method="post">
-                @csrf
-                <button class="header-nav__button">ログアウト</button>
-              </form>
-            </li>
-            <li class="header-nav__item">
-              <a class="header-nav__link" href="/mypage">マイページ</a>
-            </li>
-            <li class="header-nav__item">
-              <a class="header-nav__link" href="/sell">出品</a>
-            </li>
+              <li class="header-nav__item">
+                <a class="header-nav__link logout-link" href="#"
+                  onclick="event.preventDefault(); document.getElementById
+                  ('logout-form').submit();">
+                    ログアウト
+                </a>
+                <form id="logout-form" action="/logout" method="post" style="display: none;">
+                  @csrf
+                </form>
+              </li>
+              <li class="header-nav__item">
+                <a class="header-nav__link" href="/mypage">マイページ</a>
+              </li>
+              <li class="header-nav__item">
+                <form class="form" action="/sell" method="get">
+                  <button type="submit" class="header-nav__button">出品</button>
+                </form>
+              </li>
+            @else
+              <li class="header-nav__item">
+                <a class="header-nav__link" href="/login">ログイン</a>
+              </li>
             @endif
           </ul>
         </nav>

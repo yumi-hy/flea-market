@@ -25,8 +25,8 @@ class UserController extends Controller
     // プロフィール更新
     public function update(Request $request)
     {
-        $user = Auth::user();
-
-
+        $user = $request->only(['name', 'postcode', 'address', 'building']);
+        User::create($user);
+        return view('index');
     }
 }
