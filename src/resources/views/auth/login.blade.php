@@ -41,6 +41,11 @@
         </div>
       </div>
     </div>
+    @if ($errors->has('login_error'))
+    <div class="form__error">
+        {{ $errors->first('login_error') }}
+    </div>
+    @endif
     <div class="form__button">
       <button class="form__button-submit" type="submit">ログインする</button>
     </div>
