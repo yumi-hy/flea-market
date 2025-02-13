@@ -17,7 +17,8 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    public const HOME = '/home';
+    public const HOME = '/';
+    //商品一覧画面マイリストに設定で良いかな
 
     /**
      * The controller namespace for the application.
