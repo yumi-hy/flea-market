@@ -1,0 +1,95 @@
+/* 全体を中央配置 */
+.login__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 650px;
+    /* 高さを固定 */
+}
+
+/* 見出し（ログイン） */
+.login-form__heading h2 {
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* フォームのスタイル */
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* 入力欄全体のスタイル */
+.form__group {
+    display: flex;
+    flex-direction: column;
+    width: 680px;
+    margin-top: 20px;
+}
+
+/* ラベル（メールアドレス・パスワード） */
+.form__group-title {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: left;
+    margin-bottom: 8px;
+}
+
+/* 入力欄のスタイル */
+.form__input--text input {
+    width: 680px;
+    height: 57.09px;
+    border: 1px solid #5F5F5F;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 18px;
+}
+
+/* ログインボタンのスタイル */
+.form__button {
+    margin-top: 60px;
+}
+
+.form__button-submit {
+    width: 680px;
+    height: 65.25px;
+    border-radius: 5px;
+    background-color: #FF5555;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+}
+
+.form__button-submit:hover {
+    background-color: #E04444;
+}
+
+/* 会員登録リンクのスタイル */
+.register__link {
+    margin-top: 20px;
+}
+
+.register__button-submit {
+    font-size: 20px;
+    font-weight: 400;
+    color: #0073CC;
+    text-decoration: none;
+}
+
+/* エラーメッセージ */
+.form__error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
