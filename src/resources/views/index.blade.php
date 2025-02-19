@@ -27,23 +27,7 @@
 
     <!-- マイリスト -->
     <div class="tab-content">
-        <h2>マイリスト</h2>
-        @if(Auth::check())
-            @if ($mylist->isNotEmpty())
-                <div class="item-list">
-                    @foreach ($mylist as $item)
-                        <div class="item-card">
-                            <img src="{{ asset('storage/' . $item->image) }}" alt="{{ $item->name }}" width="100">
-                            <h3>{{ $item->name }}</h3>
-                        </div>
-                    @endforeach
-                </div>
-            @else
-                <p>マイリストに登録された商品はありません。</p>
-            @endif
-        @else
-            <p>マイリストにはログインが必要です。</p>
-        @endif
+        
     </div>
 </div>
 @endsection

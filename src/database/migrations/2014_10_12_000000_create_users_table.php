@@ -18,9 +18,9 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email');
             $table->string('password');
-            $table->string('postcode', 8);
-            $table->string('address');
-            $table->string('building');
+            $table->string('postcode', 8)->nullable();
+            $table->string('address')->nullable();
+            $table->string('building')->nullable();
             $table->timestamp('created_at')->useCurrent()->nullable();
             $table->timestamp('updated_at')->useCurrent()->nullable();
         });

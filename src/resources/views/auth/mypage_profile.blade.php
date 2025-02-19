@@ -10,8 +10,6 @@
     <h2>プロフィール設定</h2>
   </div>
   
-  <form class="form" action="/mypage/profile" method="post">
-    @csrf
     <div class="form__group">
       <div class="form__group-title">
         <span class="form__label--item">ユーザー名</span>
