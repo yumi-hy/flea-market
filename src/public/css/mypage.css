@@ -1,0 +1,33 @@
+.profile-info {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.profile-info p {
+    font-size: 36px;
+    font-weight: 700;
+    margin-top: 200px;
+    margin-right: 300px;
+    /* ボタンとの間隔調整 */
+    margin-left: 40%;
+    /* 中央寄りの左側に配置 */
+}
+
+.edit-button {
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 26px;
+    font-weight: 700;
+    color: #FF5555;
+    background-color: #fff;
+    text-decoration: none;
+    border: 2px solid #FF5555;
+    border-radius: 10px;
+    margin-top: 200px;
+}
+
+.edit-button:hover {
+    background-color: #FF5555;
+    color: #fff;
+}

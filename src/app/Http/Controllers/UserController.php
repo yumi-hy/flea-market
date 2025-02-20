@@ -66,4 +66,11 @@ class UserController extends Controller
 
         return redirect()->route('index');
     }
+
+    // マイページ表示
+    public function mypage()
+    {
+    $user = Auth::user(); // ログインユーザー情報を取得
+    return view('auth.mypage', compact('user'));
+    }
 }
