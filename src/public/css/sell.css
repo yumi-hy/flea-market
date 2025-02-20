@@ -1,0 +1,67 @@
+.category-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.category-label {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #FF5555;
+    /* 赤い枠線 */
+    border-radius: 10px;
+    background-color: white;
+    color: #FF5555;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.category-label input {
+    display: none;
+    /* 通常のチェックボックスを非表示 */
+}
+
+.category-label span {
+    display: inline-block;
+    padding: 5px 10px;
+}
+
+/* ホバー時のスタイル */
+.category-label:hover {
+    background-color: #FF5555;
+    color: white;
+}
+
+/* チェックされたときのスタイル */
+.category-label input:checked+span {
+    background-color: #FF5555;
+    color: white;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+.price-input {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.price-input .price-symbol {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #333;
+}
+
+.price-input input {
+    width: 100%;
+    padding-left: 25px;
+    /* ￥の分だけ余白を確保 */
+    font-size: 16px;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
