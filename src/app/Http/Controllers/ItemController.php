@@ -40,6 +40,7 @@ class ItemController extends Controller
             'image' => $imagePath,
             'product_state' => $request->product_state,
             'price' => $request->price,
+            'user_id' => Auth::id(),
         ]);
 
         // カテゴリー名からID取得して保存

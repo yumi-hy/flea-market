@@ -46,8 +46,4 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function mylist()
-    {
-        return $this->belongsToMany(Item::class, 'mylist', 'user_id', 'item_id')->withTimestamps();
-    }
 }

@@ -9,4 +9,6 @@
     <p>{{ Auth::user()->name }}</p>
     <a href="{{ route('profile.edit') }}" class="edit-button">プロフィールを編集</a>
 </div>
+
+
 @endsection
