@@ -1,7 +1,37 @@
+/* 全体を中央配置 */
+.sell__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 見出し（商品の出品） */
+.sell-form__heading h2 {
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+
+/* フォームのスタイル */
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
 .category-buttons {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #FF5555;
+    background-color: #fff;
+    text-decoration: none;
 }
 
 .category-label {
@@ -9,7 +39,7 @@
     padding: 10px 20px;
     border: 2px solid #FF5555;
     /* 赤い枠線 */
-    border-radius: 10px;
+    border-radius: 50px;
     background-color: white;
     color: #FF5555;
     font-weight: 700;
@@ -27,18 +57,18 @@
     padding: 5px 10px;
 }
 
-/* ホバー時のスタイル */
-.category-label:hover {
-    background-color: #FF5555;
-    color: white;
-}
-
 /* チェックされたときのスタイル */
 .category-label input:checked+span {
     background-color: #FF5555;
     color: white;
     border-radius: 10px;
     padding: 5px 10px;
+}
+
+/* ホバー時のスタイル */
+.category-label:hover {
+    background-color: #FF5555;
+    color: white;
 }
 
 .price-input {
@@ -64,4 +94,11 @@
     height: 40px;
     border: 1px solid #ccc;
     border-radius: 4px;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+    display: block;
 }
