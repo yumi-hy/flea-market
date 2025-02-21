@@ -42,11 +42,14 @@ class ItemController extends Controller
             'price' => $request->price,
         ]);
 
-        // カテゴリーを中間テーブルに保存
+        // カテゴリー名からID取得して保存
         if ($request->categories) {
-            $item->categories()->attach($request->categories);
+            $categoryIds = Category::whereIn('name', $request->categories)->pluck('id')->toArray();
+            if (!empty($categoryIds)) {
+                $item->categories()->attach($categoryIds);
+            }
         }
 
-        return redirect()->route('items.index')->with('success', '商品を出品しました！');
+        return redirect()->route('index')->with('success', '商品を出品しました！');
     }
 }

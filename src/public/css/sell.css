@@ -4,6 +4,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    max-width: 680px;
+    margin: 0 auto;
 }
 
 /* 見出し（商品の出品） */
@@ -11,50 +14,87 @@
     font-size: 36px;
     font-weight: 700;
     text-align: center;
-    margin-top: 100px;
+    margin-top: 50px;
     margin-bottom: 20px;
 }
 
 /* フォームのスタイル */
-.form {
+form {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
+    max-width: 680px;
+    padding: 20px;
+    margin: 0 auto;
 }
 
+/* 入力欄のスタイル */
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #5F5F5F;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+/* 商品画像 */
+.form__label--item {
+    font-weight: 700;
+    font-size: 24px;
+    text-align: left;
+}
+
+.form__group-content input[type="file"] {
+    width: 680px;
+    height: 180px;
+    border: 2px solid #5F5F5F;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 商品詳細 */
+.form__group-title span {
+    font-weight: 700;
+    font-size: 30px;
+    color: #5F5F5F;
+}
+
+/* カテゴリー選択ボタン */
 .category-buttons {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    font-size: 15px;
-    font-weight: 500;
-    color: #FF5555;
-    background-color: #fff;
-    text-decoration: none;
+    justify-content: flex-start;
+    max-width: 680px;
 }
 
 .category-label {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 1px 5px;
     border: 2px solid #FF5555;
-    /* 赤い枠線 */
     border-radius: 50px;
     background-color: white;
     color: #FF5555;
     font-weight: 700;
     font-size: 16px;
     cursor: pointer;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
 }
 
 .category-label input {
     display: none;
-    /* 通常のチェックボックスを非表示 */
 }
 
 .category-label span {
     display: inline-block;
-    padding: 5px 10px;
+    padding: 0 10px;
 }
 
 /* チェックされたときのスタイル */
@@ -62,7 +102,6 @@
     background-color: #FF5555;
     color: white;
     border-radius: 10px;
-    padding: 5px 10px;
 }
 
 /* ホバー時のスタイル */
@@ -71,9 +110,32 @@
     color: white;
 }
 
+/* 商品状態、ブランド名、商品説明、販売価格 */
+.form__group-title span {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+/* 商品と説明の見出し */
+.form__group-title .form__label--item {
+    font-weight: 700;
+    font-size: 30px;
+    color: #5F5F5F;
+}
+
+/* 商品状態のセレクトボックス */
+select {
+    appearance: none;
+    background: white;
+    border: 1px solid #B1B1B1;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 16px;
+}
+
 .price-input {
     position: relative;
-    display: inline-block;
     width: 100%;
 }
 
@@ -83,16 +145,15 @@
     top: 50%;
     transform: translateY(-50%);
     font-size: 16px;
-    color: #333;
+    color: black;
 }
 
 .price-input input {
     width: 100%;
-    padding-left: 25px;
-    /* ￥の分だけ余白を確保 */
+    padding-left: 30px;
     font-size: 16px;
     height: 40px;
-    border: 1px solid #ccc;
+    border: 1px solid #5F5F5F;
     border-radius: 4px;
 }
 
@@ -101,4 +162,24 @@
     font-size: 14px;
     margin-top: 5px;
     display: block;
+}
+
+/* 出品ボタン */
+.form__button-submit {
+    width: 100%;
+    max-width: 680px;
+    background-color: #FF5555;
+    color: white;
+    font-size: 26px;
+    font-weight: 700;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.form__button-submit:hover {
+    background-color: #FF3333;
 }

@@ -14,6 +14,6 @@ class Item extends Model
     // 多対多のリレーション
     public function categories()
     {
-        return $this->belongsToMany(Category::class, 'category_item');
+        return $this->belongsToMany(Category::class, 'category_item', 'item_id', 'category_id');
     }
 }
