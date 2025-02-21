@@ -26,8 +26,9 @@
     </div>
 
     <!-- マイリスト -->
-    <div class="tab-content">
-        
+    <div>
+       
     </div>
+    
 </div>
 @endsection
