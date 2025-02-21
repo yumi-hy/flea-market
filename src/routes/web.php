@@ -32,3 +32,6 @@ Route::middleware(['auth'])->group(function () {
 });
 
 Route::get('/mypage', [UserController::class, 'mypage'])->name('mypage')->middleware('auth');
+
+Route::get('/sell', [ItemController::class, 'create'])->name('items.create');
+Route::post('/sell', [ItemController::class, 'store'])->name('items.store');

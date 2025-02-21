@@ -16,7 +16,6 @@ class ItemsTableSeeder extends Seeder
     public function run()
     {
         DB::table('items')->insert([
-            'item_id' => 'W001',
             'product' => '腕時計',
             'price' => 15000,
             'product_description' => 'スタイリッシュなデザインのメンズ腕時計',
@@ -27,7 +26,6 @@ class ItemsTableSeeder extends Seeder
         ]);
 
         DB::table('items')->insert([
-            'item_id' => 'W002',
             'product' => 'HDD',
             'price' => 5000,
             'product_description' => '高速で信頼性の高いハードディスク',
@@ -38,7 +36,6 @@ class ItemsTableSeeder extends Seeder
         ]);
 
         DB::table('items')->insert([
-            'item_id' => 'W003',
             'product' => '玉ねぎ3束',
             'price' => 300,
             'product_description' => '新鮮な玉ねぎ3束のセット',
@@ -49,7 +46,6 @@ class ItemsTableSeeder extends Seeder
         ]);
 
         DB::table('items')->insert([
-            'item_id' => 'W004',
             'product' => '革靴',
             'price' => 4000,
             'product_description' => 'クラシックなデザインの革靴',
@@ -60,7 +56,6 @@ class ItemsTableSeeder extends Seeder
         ]);
 
         DB::table('items')->insert([
-            'item_id' => 'W005',
             'product' => 'ノートPC',
             'price' => 45000,
             'product_description' => '高性能なノートパソコン',
@@ -71,7 +66,6 @@ class ItemsTableSeeder extends Seeder
         ]);
 
         DB::table('items')->insert([
-            'item_id' => 'W006',
             'product' => 'マイク',
             'price' => 8000,
             'product_description' => '高音質のレコーディング用マイク',
@@ -82,7 +76,6 @@ class ItemsTableSeeder extends Seeder
         ]);
 
         DB::table('items')->insert([
-            'item_id' => 'W007',
             'product' => 'ショルダーバッグ',
             'price' => 3500,
             'product_description' => 'おしゃれなショルダーバッグ',
@@ -93,7 +86,6 @@ class ItemsTableSeeder extends Seeder
         ]);
 
         DB::table('items')->insert([
-            'item_id' => 'W008',
             'product' => 'タンブラー',
             'price' => 500,
             'product_description' => '使いやすいタンブラー',
@@ -104,7 +96,6 @@ class ItemsTableSeeder extends Seeder
         ]);
 
         DB::table('items')->insert([
-            'item_id' => 'W009',
             'product' => 'コーヒーミル',
             'price' => 4000,
             'product_description' => '手動のコーヒーミル',
@@ -115,7 +106,6 @@ class ItemsTableSeeder extends Seeder
         ]);
 
         DB::table('items')->insert([
-            'item_id' => 'W010',
             'product' => 'メイクセット',
             'price' => 2500,
             'product_description' => '便利なメイクアップセット',
