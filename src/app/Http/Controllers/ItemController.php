@@ -14,6 +14,7 @@ class ItemController extends Controller
     {
         // おすすめ商品の取得（例: ランダムで5件取得）
         $recommendations = Item::inRandomOrder()->take(5)->get();
+        //dd($recommendations);
 
         return view('index', compact('recommendations'));
     }

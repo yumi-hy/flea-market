@@ -16,10 +16,12 @@
     <div class="tab-content">
         <h2>おすすめ</h2>
         <div class="item-list">
-            @foreach ($recommendations as $item)
+            @foreach ($recommendations as $recommendation)
                 <div class="item-card">
-                    <img src="{{ asset('storage/' . $item->image) }}" alt="{{ $item->name }}" width="100">
-                    <h3>{{ $item->name }}</h3>
+                    <img src="{{ $recommendation->image }}" alt="{{ $recommendation->name }}" width="100">
+                    <h3>{{ $recommendation->id }}</h3>
+                    <h3>{{ $recommendation->image }}</h3>
+
                 </div>
             @endforeach
         </div>
