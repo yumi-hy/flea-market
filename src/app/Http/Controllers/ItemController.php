@@ -54,4 +54,11 @@ class ItemController extends Controller
 
         return redirect()->route('index')->with('success', '商品を出品しました！');
     }
+
+    public function show($id)
+    {
+        $item = Item::findOrFail($id); // 指定したIDの商品を取得
+        return view('item.item', compact('item'));
+    }
+
 }

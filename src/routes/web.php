@@ -35,3 +35,5 @@ Route::get('/mypage', [UserController::class, 'mypage'])->name('mypage')->middle
 
 Route::get('/sell', [ItemController::class, 'create'])->name('items.create');
 Route::post('/sell', [ItemController::class, 'store'])->name('items.store');
+
+Route::get('/item/{id}', [ItemController::class, 'show'])->name('item.show');

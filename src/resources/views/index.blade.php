@@ -18,10 +18,20 @@
         <div class="item-list">
             @foreach ($recommendations as $recommendation)
                 <div class="item-card">
-                    <img src="{{ $recommendation->image }}" alt="{{ $recommendation->name }}" width="100">
-                    <h3>{{ $recommendation->id }}</h3>
-                    <h3>{{ $recommendation->image }}</h3>
+                    <a href="{{ route('item.show', ['id' => $recommendation->id]) }}">
+                        @php
+                            $imagePath = $recommendation->image;
+                        @endphp
 
+                        @if (Str::startsWith($imagePath, 'http'))
+                            <!-- 画像URLがhttpから始まる場合 -->
+                            <img src="{{ $imagePath }}" alt="{{ $recommendation->product }}" width="100">
+                        @else
+                            <!-- storage内の画像を表示 -->
+                            <img src="{{ asset('storage/' . ltrim($imagePath, '/')) }}" alt="{{ $recommendation->product }}" width="100">
+                        @endif
+                    </a>
+                    <h3>{{ $recommendation->product }}</h3>
                 </div>
             @endforeach
         </div>
