@@ -58,6 +58,16 @@ h1 {
     /* アイコン同士の間隔 */
 }
 
+/* アイコンのサイズを設定 */
+.action-icons span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+}
+
 .purchase-btn {
     background-color: #FF5555;
     color: white;
@@ -66,22 +76,40 @@ h1 {
     font-size: 30px;
     font-weight: 700;
     cursor: pointer;
-    width: 100%;
+    width: 570px;
+    height: 56px;
     text-align: center;
 }
 
 h2 {
-    font-size: 18px;
+    font-size: 36px;
+    font-weight: 700;
     margin-top: 20px;
 }
 
+/* 商品説明のスタイル */
+.product-description {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.info-label {
+    font-size: 24px;
+    font-weight: 700;
+}
+
 .category-tag {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     background-color: #eaeaea;
-    padding: 5px 10px;
-    margin-right: 5px;
+    height: 30px;
+    width: 102px;
     border-radius: 15px;
-    font-size: 14px;
+    font-size: 20px;
+    font-weight: 400;
+    margin-right: 5px;
+    /* タグ同士の間隔 */
 }
 
 .product-state {
@@ -116,24 +144,21 @@ h2 {
 }
 
 .comment-input {
-    width: 100%;
+    width: 570px;
     height: 80px;
     margin-top: 10px;
     padding: 5px;
 }
 
 .comment-btn {
-    background-color: #ff4d4d;
+    width: 570px;
+    height: 56px;
+    background-color: #FF5555;
     color: white;
+    font-size: 25px;
+    font-weight: 700;
     padding: 10px;
     margin-top: 10px;
     border: none;
     cursor: pointer;
-}
-
-.back-link {
-    display: block;
-    margin-top: 20px;
-    color: #007bff;
-    text-decoration: none;
 }

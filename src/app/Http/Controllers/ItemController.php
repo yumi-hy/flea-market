@@ -61,4 +61,10 @@ class ItemController extends Controller
         return view('item.item', compact('item'));
     }
 
+    public function purchase($id)
+    {
+        $item = Item::findOrFail($id);
+        return view('item.purchase', compact('item'));
+    }
+
 }

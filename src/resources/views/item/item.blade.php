@@ -24,21 +24,25 @@
 
             <div class="actions">
                 <div class="action-icons">
-                    <span>☆ 3</span>
-                    <span>💬 1</span>
+                    <span>☆</span>
+                    <span>💬</span>
                 </div>
-                <button class="purchase-btn">購入手続きへ</button>
+                <form action="{{ route('item.purchase', ['id' => $item->id]) }}" method="GET">
+                    <button type="submit" class="purchase-btn">購入手続きへ</button>
+                </form>
             </div>
 
             <h2>商品説明</h2>
             <p>{{ $item->product_description }}</p>
 
             <h2>商品の情報</h2>
-            <p>カテゴリー:
+            <p class="info-label">カテゴリー
                 <span class="category-tag">洋服</span>
                 <span class="category-tag">メンズ</span>
             </p>
-            <p>商品状態: <span class="product-state">{{ $item->product_state }}</span></p>
+            <p class="info-label">商品状態
+                <span class="product-state">{{ $item->product_state }}</span>
+            </p>
 
             <h2>コメント(1)</h2>
             <div class="comment">
@@ -52,7 +56,5 @@
             <button class="comment-btn">コメントを送信する</button>
         </div>
     </div>
-
-    <a href="{{ route('index') }}" class="back-link">← 戻る</a>
 </div>
 @endsection
