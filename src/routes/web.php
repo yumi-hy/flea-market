@@ -39,3 +39,8 @@ Route::post('/sell', [ItemController::class, 'store'])->name('items.store');
 Route::get('/item/{id}', [ItemController::class, 'show'])->name('item.show');
 
 Route::get('/item/purchase/{id}', [ItemController::class, 'purchase'])->name('item.purchase');
+
+Route::post('/purchase/update-payment', [ItemController::class, 'updatePayment'])->name('purchase.updatePayment');
+
+Route::get('/purchase/address', [ItemController::class, 'editAddress'])->name('purchase.address');
+Route::put('/purchase/address', [ItemController::class, 'updateAddress'])->name('purchase.address.update');

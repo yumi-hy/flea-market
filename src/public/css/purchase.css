@@ -1,0 +1,142 @@
+/* ページ全体のコンテナ */
+.purchase-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 40px auto;
+}
+
+/* 左側のコンテンツ */
+.left-section {
+    width: 60%;
+}
+
+/* 右側のコンテンツ（購入サマリー） */
+.right-section {
+    width: 35%;
+}
+
+/* 商品画像と情報を横並びに配置 */
+.product-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* 商品画像 */
+.product-image {
+    width: 177.5px;
+    height: 177.5px;
+    background: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.product-image img {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    /* アスペクト比を保持 */
+    object-fit: contain;
+    /* 画像の全体を表示 */
+}
+
+/* 商品情報 */
+.product-info {
+    flex: 1;
+    margin-top: 0px;
+}
+
+.product-info h2 {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.price {
+    font-size: 27px;
+    font-weight: 400;
+    color: black;
+}
+
+/* 支払い方法 */
+.payment-method {
+    margin-top: 20px;
+}
+
+.payment-method h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.payment-method select {
+    width: 265px;
+    height: 31px;
+    padding: 5px;
+    border: 1px solid #5F5F5F;
+    font-size: 16px;
+}
+
+/* 配送先 */
+.shipping-address {
+    margin-top: 20px;
+}
+
+.shipping-address h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.shipping-address p {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.change-address {
+    color: #0073CC;
+    text-decoration: underline;
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+/* セクションの区切り線 */
+hr {
+    border: none;
+    border-top: 1px solid #000000;
+    margin: 20px 0;
+}
+
+/* 購入サマリー */
+.summary-box {
+    border: 1px solid #000000;
+    padding: 15px;
+    background-color: #fff;
+    font-size: 14px;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+}
+
+/* 購入ボタン */
+.purchase-button {
+    background-color: #ff5a5a;
+    color: white;
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.purchase-button:hover {
+    background-color: #e04a4a;
+}

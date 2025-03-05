@@ -64,7 +64,24 @@ class ItemController extends Controller
     public function purchase($id)
     {
         $item = Item::findOrFail($id);
-        return view('item.purchase', compact('item'));
+        $user = Auth::user();
+
+        return view('item.purchase', compact('item', 'user'));
+    }
+
+    public function updatePayment(Request $request)
+    {
+        // 選択された支払い方法をセッションに保存
+        session(['payment_method' => $request->input('payment_method')]);
+
+        // 同じページにリダイレクト
+        return redirect()->back();
+    }
+
+    public function editAddress()
+    {
+        $user = Auth::user();
+        return view('item.purchase_address', compact('user'));
     }
 
 }
